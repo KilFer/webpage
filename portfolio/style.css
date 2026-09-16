@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+/* ── Variables ─────────────────────────────── */
+:root {
+  --accent:      #ff6600;
+  --text:        #e8e8e8;
+  --text-muted:  #aaa;
+  --surface:     #252525;
+  --thumb-bg:    #171717;
+  --hairline:    rgba(255, 255, 255, 0.09);
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --ease: 150ms ease;
+}
+
+/* ── Reset ─────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Body ──────────────────────────────────── */
+body {
+  font-family: var(--font);
+  color: var(--text);
+  min-height: 100vh;
+  padding: clamp(3rem, 8vw, 5.5rem) 1.5rem 6rem;
+}
+
+/* ── Page ──────────────────────────────────── */
+.portfolio {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* ── Back link ─────────────────────────────── */
+.backlink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--ease);
+}
+
+.backlink:hover { color: var(--accent); }
+
+.backlink svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ── Heading ───────────────────────────────── */
+.portfolio__head {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.title {
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.title em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.intro {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 46ch;
+}
+
+/* ── Grid ──────────────────────────────────── */
+.cases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+  list-style: none;
+}
+
+/* ── Case card ─────────────────────────────── */
+.case {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  overflow: hidden;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color var(--ease), transform var(--ease);
+}
+
+.case:hover {
+  border-color: rgba(255, 102, 0, 0.55);
+  transform: translateY(-2px);
+}
+
+.case__thumb {
+  display: block;
+  width: 100%;
+  height: 176px;
+  background: var(--thumb-bg);
+  border-bottom: 1px solid var(--hairline);
+  object-fit: cover;
+}
+
+.case__thumb svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.case__body {
+  padding: 1.4rem 1.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.case__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.case__title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.case__abbr {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+.case__year {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.case__desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.case__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.4rem;
+}
+
+/* ── Tags ──────────────────────────────────── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  padding: 3px 11px;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── Status marker ─────────────────────────── */
+.status {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status--active {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.16);
+}
+
+.status--abandoned {
+  background: #5c5c5c;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+/* ── Placeholder cell ──────────────────────── */
+.case--soon {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 200px;
+  padding: 2.5rem 1.5rem;
+  border-style: dashed;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.case--soon:hover {
+  border-color: var(--hairline);
+  transform: none;
+}
+
+.case--soon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ── Mobile ────────────────────────────────── */
+@media (max-width: 640px) {
+  .cases {
+    grid-template-columns: 1fr;
+  }
+}

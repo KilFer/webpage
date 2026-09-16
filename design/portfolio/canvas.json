@@ -1,0 +1,18 @@
+{
+  "pages": [
+    { "id": "deliverable", "name": "Portafolio" },
+    { "id": "exploracion", "name": "Exploración" }
+  ],
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1280, "h": 1240, "page": "deliverable" },
+    { "file": "CardTemplate.dc.html", "x": 1360, "y": 0, "w": 980, "h": 620, "page": "deliverable", "title": "Plantilla de tarjeta" },
+    { "file": "DirectionA.dc.html", "x": 0, "y": 0, "w": 1280, "h": 1060, "page": "exploracion", "title": "A · Índice tipográfico" },
+    { "file": "DirectionC.dc.html", "x": 1360, "y": 0, "w": 1320, "h": 900, "page": "exploracion", "title": "C · Consola" }
+  ],
+  "annotations": [
+    { "id": "deliverable-note", "x": 0, "y": -150, "w": 1280, "page": "deliverable", "text": "Portafolio · dirección B (rejilla). Cabecera como la home (enlace de vuelta con icono de casa + «Porta·folio») y el mismo fondo CSS de la home. Cada tarjeta: miniatura del panel (por ahora boceto, luego imagen real), año pequeño a la derecha del título, chips de categoría abajo a la izquierda y un marcador de estado abajo a la derecha (punto naranja = activo, gris = abandonado; se fija por caso). La última celda es un hueco punteado para los casos que vengan." },
+    { "id": "template-note", "x": 1360, "y": -150, "w": 980, "page": "deliverable", "text": "Plantilla base para cada caso: mismos estilos que las tarjetas de la izquierda, con los huecos etiquetados." },
+    { "id": "expl-note", "x": 0, "y": -150, "w": 1280, "page": "exploracion", "text": "Direcciones descartadas, guardadas como referencia. A · índice tipográfico (lo más sobrio). C · consola con barra lateral. Seguimos con la B." }
+  ],
+  "launch": { "view": "canvas", "page": "deliverable" }
+}

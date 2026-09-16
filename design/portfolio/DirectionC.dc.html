@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap">
+  <style>
+    :root {
+      --accent: #ff6600;
+      --text: #e8e8e8;
+      --muted: #aaa;
+      --panel: #1e1e1e;
+      --hairline: rgba(255, 255, 255, 0.09);
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      background-color: #1A1A1A;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%231A1A1A' stroke-width='0.4' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(5.9) translate(-830.51 -622.88)'%3E%3Cuse fill='%232c2c2c' href='%23s' y='2'/%3E%3Cuse fill='%232c2c2c' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23393939' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23393939' href='%23s'/%3E%3Cuse fill='%23434343' href='%23s' x='2'/%3E%3Cuse fill='%23434343' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(5.9) translate(-830.51 -622.88)'%3E%3Cg fill='%234c4c4c'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(5.9) translate(-830.51 -622.88)'%3E%3Cg fill='%234c4c4c'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(5.9) translate(-830.51 -622.88)'%3E%3Cg fill='%23545454'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(5.9) translate(-830.51 -622.88)'%3E%3Cg fill='%231A1A1A'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%235c5c5c'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(5.9) translate(-830.51 -622.88)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(5.9) translate(-830.51 -622.88)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(5.9) translate(-830.51 -622.88)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    a { color: inherit; text-decoration: none; }
+    .panel {
+      max-width: 1160px; margin: 64px auto; min-height: 660px;
+      display: flex;
+      background: var(--panel);
+      border: 1px solid var(--hairline);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .side {
+      width: 246px; flex-shrink: 0;
+      border-right: 1px solid var(--hairline);
+      padding: 26px 18px;
+      display: flex; flex-direction: column; gap: 24px;
+    }
+    .wordmark { font-size: 0.92rem; font-weight: 400; padding: 0 10px; letter-spacing: 0.01em; }
+    .nav { display: flex; flex-direction: column; gap: 2px; }
+    .nav-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 9px 10px; border-radius: 6px;
+      font-size: 0.88rem; color: var(--muted);
+      border-left: 2px solid transparent;
+      transition: background-color 150ms ease, color 150ms ease;
+    }
+    .nav-item:hover { background: rgba(255, 255, 255, 0.03); color: var(--text); }
+    .nav-item.is-active { color: var(--text); background: rgba(255, 255, 255, 0.04); border-left-color: var(--accent); }
+    .nav-item .count { font-size: 0.78rem; color: var(--muted); }
+    .side .foot { margin-top: auto; }
+    .side .foot a { display: inline-flex; align-items: center; gap: 7px; padding: 0 10px; font-size: 0.84rem; color: var(--muted); transition: color 150ms ease; }
+    .side .foot a:hover { color: var(--accent); }
+    .main { flex-grow: 1; padding: 28px 32px 30px; display: flex; flex-direction: column; }
+    .main-head { display: flex; align-items: baseline; justify-content: space-between; }
+    .main-head h1 { font-weight: 300; font-size: 1.5rem; letter-spacing: -0.01em; }
+    .main-head .n { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+    .thead, .trow {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 128px 176px 56px;
+      gap: 20px; align-items: center;
+    }
+    .thead {
+      margin-top: 28px; padding-bottom: 12px;
+      border-bottom: 1px solid var(--hairline);
+      font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+    }
+    .trow {
+      padding: 18px 0; border-bottom: 1px solid var(--hairline);
+      transition: background-color 150ms ease;
+    }
+    .trow:hover { background: rgba(255, 255, 255, 0.02); }
+    .trow .p-name { font-size: 1rem; font-weight: 400; display: flex; align-items: baseline; gap: 8px; }
+    .trow .p-name .code { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.06em; }
+    .trow .cell { font-size: 0.85rem; color: var(--muted); }
+    .status { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--text); }
+    .status .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .status .dot--live { background: var(--accent); }
+    .status .dot--link { background: #5c5c5c; }
+    .main .foot-note { margin-top: 20px; font-size: 0.82rem; color: var(--muted); }
+  </style>
+</helmet>
+<div style="min-height: 800px;">
+  <div class="panel">
+
+    <aside class="side">
+      <div class="wordmark">Fernando <span style="color: var(--accent);">Belaza</span></div>
+      <nav class="nav">
+        <a class="nav-item is-active" href="#"><span>Todos</span><span class="count">2</span></a>
+        <a class="nav-item" href="#"><span>Infra</span><span class="count">1</span></a>
+        <a class="nav-item" href="#"><span>Salud</span><span class="count">1</span></a>
+        <a class="nav-item" href="#"><span>Juegos de mesa</span><span class="count">0</span></a>
+      </nav>
+      <div class="foot">
+        <a href="/">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.4 12 4l9 7.4" /><path d="M5.5 10.2V20h13v-9.8" /><path d="M10 20v-5.2h4V20" /></svg>
+          Volver a la home
+        </a>
+      </div>
+    </aside>
+
+    <section class="main">
+      <div class="main-head">
+        <h1>Porta<span style="color: var(--accent);">folio</span></h1>
+        <span class="n">2 proyectos</span>
+      </div>
+
+      <div class="thead">
+        <span>Proyecto</span>
+        <span>Categor&iacute;a</span>
+        <span>Estado</span>
+        <span>A&ntilde;o</span>
+      </div>
+
+      <a class="trow" href="#">
+        <span class="p-name">Dashboard</span>
+        <span class="cell">Infra</span>
+        <span><span class="status"><span class="dot dot--live"></span>En uso</span></span>
+        <span class="cell">2025</span>
+      </a>
+
+      <a class="trow" href="#">
+        <span class="p-name">Pebble Health System <span class="code">PHS</span></span>
+        <span class="cell">Salud</span>
+        <span><span class="status"><span class="dot dot--link"></span>Panel en Dashboard</span></span>
+        <span class="cell">2025</span>
+      </a>
+
+      <div class="foot-note">M&aacute;s casos en camino.</div>
+    </section>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
